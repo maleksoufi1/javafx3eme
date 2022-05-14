@@ -15,9 +15,9 @@ import java.util.logging.Logger;
  * @author Kouki
  */
 public class DataSource {
-    private String url="jdbc:mysql://localhost:3306/adomifitregime" ;
+    private String url="jdbc:mysql://localhost:3306/adomifitt" ;
     private String login="root" ;
-    private String pwd="" ;
+    private String pwd="root" ;
     private static DataSource instance;
     private Connection conn;
     

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="anchor" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ModifierRep_ReclamationController">
+    <stylesheets>
+    <URL value="@app.css" />
+  </stylesheets>
+    <children>
+      <Label layoutX="221.0" layoutY="141.0" text="Contenu" />
+      <TextArea fx:id="mod_contenu" layoutX="301.0" layoutY="97.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="but_mod" layoutX="440.0" layoutY="336.0" mnemonicParsing="false" onAction="#update_rec" text="Modifier" />
+      <Label fx:id="req_contenu" styleClass="req" layoutX="300.0" layoutY="305.0" textFill="#f50505" />
+   
+    <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" opacity="0.98" prefHeight="434.0" prefWidth="179.0" style="-fx-background-color: #2B2930;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="62.0" prefWidth="179.0">
+               <children>
+                  <ImageView fitHeight="73.0" fitWidth="187.0" layoutX="-3.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Button mnemonicParsing="false" onAction="#RedirectToReclamation" opacity="0.41" prefHeight="44.0" prefWidth="198.0" style="-fx-background-color: orange;" text="Boite de Reclamations">
+               <opaqueInsets>
+                  <Insets left="50.0" />
+               </opaqueInsets></Button>
+            <Button mnemonicParsing="false" onAction="#redirectToMesReclamation" prefHeight="44.0" prefWidth="198.0" style="-fx-background-color: orange;" text="Vos Réponse">
+               <opaqueInsets>
+                  <Insets left="50.0" />
+               </opaqueInsets>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#RedirectToReponse" opacity="0.41" prefHeight="44.0" prefWidth="198.0" style="-fx-background-color: orange;" text="Boite De Réponse">
+               <opaqueInsets>
+                  <Insets left="50.0" />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </VBox>
+      <Label fx:id="contenu_req" layoutX="314.0" layoutY="312.0" textFill="#ee1414" />
+       <Pane layoutX="179.0" layoutY="-5.0" opacity="0.98" prefHeight="68.0" prefWidth="420.0" style="-fx-background-color: #2B2930;" styleClass="nav" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-5.0">
+         <children>
+            <Button layoutY="5.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" prefHeight="62.0" prefWidth="96.0" style="-fx-background-color: orange;" text="Reclamation" />
+            <Button layoutX="96.0" layoutY="5.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#redirectToProduit" opacity="0.41" prefHeight="62.0" prefWidth="96.0" style="-fx-background-color: orange;" styleClass="border" text="Produit" />
+            <Button layoutX="192.0" layoutY="5.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#RedirectToRégime" opacity="0.41" prefHeight="62.0" prefWidth="96.0" style="-fx-background-color: orange;" text="Régime" />
+            <Button layoutX="288.0" layoutY="5.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#RedirectToProgramme" opacity="0.41" prefHeight="62.0" prefWidth="96.0" style="-fx-background-color: orange;" text="Programme" />
+         </children>
+      </Pane>
+    
+    </children>
+</AnchorPane>

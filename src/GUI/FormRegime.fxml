@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FormRegimeController">
+   <content>
+      <AnchorPane id="AnchorPane" prefHeight="370.0" prefWidth="450.0">
+         <children>
+            <Label layoutX="40.0" layoutY="55.0" text="Type :" />
+            <Label layoutX="30.0" layoutY="99.0" text="Description :" />
+            <Label layoutX="40.0" layoutY="220.0" text="Dificulté :" />
+            <Label layoutX="40.0" layoutY="256.0" text="Categorie :" />
+            <Label layoutX="51.0" layoutY="311.0" text="Image :" />
+            <TextField fx:id="typeTF" layoutX="225.0" layoutY="50.0" />
+            <TextArea fx:id="descriptionTF" layoutX="225.0" layoutY="87.0" prefHeight="83.0" prefWidth="200.0" />
+            <TextField fx:id="dificulteTF" layoutX="225.0" layoutY="215.0" />
+            <TextField fx:id="imageTF" layoutX="181.0" layoutY="306.0" />
+            <ComboBox fx:id="CombolistCategorie" layoutX="225.0" layoutY="251.0" prefHeight="31.0" prefWidth="198.0" promptText="--Select Categorie --" />
+            <Button fx:id="btn_ajout" layoutX="130.0" layoutY="393.0" mnemonicParsing="false" onMouseClicked="#save" text="Save" />
+            <Label layoutX="55.0" layoutY="181.0" text="Prix :" />
+            <TextField fx:id="prixTF" layoutX="225.0" layoutY="176.0" />
+            <Button fx:id="btn_cancel" layoutX="304.0" layoutY="393.0" mnemonicParsing="false" onMouseClicked="#closeDialog" text="Cancel" />
+            <Button fx:id="btnUpload" accessibleRole="IMAGE_VIEW" layoutX="380.0" layoutY="306.0" mnemonicParsing="false" onMouseClicked="#uploadImage" text="Upload" />
+            <ImageView fx:id="Image" fitHeight="129.0" fitWidth="200.0" layoutX="286.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </content>
+   <header>
+      <Label fx:id="titreForm" alignment="CENTER" text="Ajouter Régime :">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </header>
+</DialogPane>

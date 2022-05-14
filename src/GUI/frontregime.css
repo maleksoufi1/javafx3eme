@@ -1,0 +1,86 @@
+.search{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius:100;  
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.search-button{
+     -fx-background-color: #828282;
+      -fx-background-radius:30;
+}
+
+.right-bar{
+    -fx-background-color: #D3D3D3;
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.1),10.0,0.0,0.0,10.0);
+}
+
+.acheter{
+    -fx-background-color: #F68105;
+    -fx-background-radius:30;
+}
+.boxRegime{
+    -fx-background-color: #C3B5A0;
+    -fx-background-radius:30; 
+}
+
+.boxMetier1{
+    -fx-background-color: #D3D3D3;
+    -fx-background-radius:30; 
+}
+.boxMetier2{
+    -fx-background-color: #D3D3D3;
+    -fx-background-radius:30; 
+}
+
+.box-regime{
+       -fx-background-color: #FFFFFF;
+    -fx-background-radius:30;  
+}
+
+
+
+.btn_accueil {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn_accueil span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn_accueil span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn_accueil:hover span {
+  padding-right: 25px;
+}
+
+.btn_accueil:hover span:after {
+  opacity: 1;
+  right: 0;
+}

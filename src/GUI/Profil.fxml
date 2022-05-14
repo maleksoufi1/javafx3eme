@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProfilController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutY="6.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: ffffff;">
+         <children>
+            <Label layoutX="20.0" layoutY="18.0" prefHeight="22.0" prefWidth="164.0" text="Adomifit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="31.0" />
+               </font>
+            </Label>
+            <Label layoutX="414.0" layoutY="107.0" text="Modifier votre profil">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+            <Label layoutX="415.0" layoutY="220.0" text="Nom :">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="415.0" layoutY="282.0" text="Prénom :">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="418.0" layoutY="351.0" text="Téléphone :">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_nom" layoutX="654.0" layoutY="221.0" prefHeight="34.0" prefWidth="179.0" />
+            <TextField fx:id="tf_prenom" layoutX="654.0" layoutY="283.0" prefHeight="34.0" prefWidth="179.0" />
+            <TextField fx:id="tf_tel" layoutX="654.0" layoutY="344.0" prefHeight="34.0" prefWidth="179.0" />
+            <TextField fx:id="tf_email" layoutX="652.0" layoutY="414.0" prefHeight="34.0" prefWidth="179.0" />
+            <Label layoutX="418.0" layoutY="414.0" text="Adresse email :">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="418.0" layoutY="473.0" text="Mot de passe :">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="tf_pwd" layoutX="653.0" layoutY="474.0" prefHeight="34.0" prefWidth="179.0" />
+            <Button fx:id="btn_conf" layoutX="618.0" layoutY="533.0" mnemonicParsing="false" onAction="#confirm" prefHeight="37.0" prefWidth="214.0" style="-fx-background-color: black;" text="Modifier" textFill="#ff6000">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="1133.0" layoutY="27.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: black;" text="Déconnexion" textFill="#ff6000">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="10.0" layoutY="9.0" prefHeight="719.0" prefWidth="292.0" style="-fx-background-color: #000000;">
+         <children>
+            <Pane>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="155.0" fitWidth="179.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../images/logob.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="65.0" prefWidth="227.0" />
+            <Button fx:id="btn_listuser" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#showListeUtilisateurs" onMouseClicked="#showListCtegorieRegime" prefHeight="49.0" prefWidth="255.0" stylesheets="@style.css" text="Listes Utilisateurs" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_evenement" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#showListEvenement" onMouseClicked="#showMesRegimes" prefHeight="49.0" prefWidth="257.0" stylesheets="@style.css" text="Listes evenements" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_produit" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#showListeProduits" onMouseClicked="#showStatistique" prefHeight="49.0" prefWidth="257.0" stylesheets="@style.css" text="Listes des produits" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_reclamation" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#showListeReclamation" onMouseClicked="#showListeSuivis" prefHeight="49.0" prefWidth="257.0" stylesheets="@style.css" text="Listes des reclamation" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

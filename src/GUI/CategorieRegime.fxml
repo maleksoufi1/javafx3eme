@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CategorieRegimeController">
+   <children>
+       <Pane fx:id="ContentPaneGestionnaire" layoutX="254.0" prefHeight="810.0" prefWidth="1064.0">
+         <children>
+            <Label layoutX="805.0" layoutY="33.0" prefHeight="17.0" prefWidth="101.0" text="Nutritionniste">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="49.0" fitWidth="60.0" layoutX="745.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/jimmy-fallon.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="279.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des catégories régimes">
+               <font>
+                  <Font name="Arial Bold Italic" size="27.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tabCategories" layoutX="7.0" layoutY="329.0" prefHeight="477.0" prefWidth="1052.0">
+              <columns>
+                <TableColumn fx:id="colLibelle" prefWidth="134.0" text="Libelle" />
+                <TableColumn fx:id="colDescription" prefWidth="438.0" text="Description" />
+                  <TableColumn fx:id="colStatColor" prefWidth="227.0" text="Stat couleur" />
+                  <TableColumn fx:id="colActions" prefWidth="115.0" text="Actions" />
+              </columns>
+            </TableView>
+            <Button fx:id="btn_ajout" layoutX="386.0" layoutY="234.0" mnemonicParsing="false" onAction="#addCategorie" style="-fx-background-color: #50D404;" text="Ajouter" />
+            <Label layoutX="24.0" layoutY="170.0" text="Libelle :" />
+            <Label layoutX="249.0" layoutY="170.0" text="Statistique couleur :" />
+            <Label layoutX="14.0" layoutY="213.0" text="Description :" />
+            <TextField fx:id="libelleTF" layoutX="83.0" layoutY="165.0" prefHeight="31.0" prefWidth="131.0" />
+            <TextArea fx:id="descriptionTF" layoutX="127.0" layoutY="201.0" prefHeight="65.0" prefWidth="200.0" />
+            <JFXColorPicker fx:id="statColorTF" editable="true" layoutX="420.0" layoutY="168.0" />
+         </children>
+       </Pane>
+       
+       <VBox prefHeight="588.0" prefWidth="255.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+           <children>
+            <Pane>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="155.0" fitWidth="179.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                       <Image url="@../images/logob.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+          <Pane prefHeight="65.0" prefWidth="227.0" /> 
+          
+               <Button fx:id="btn_listCategorie" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#showListCtegorieRegime" onMouseClicked="#showListCtegorieRegime" prefHeight="49.0" prefWidth="255.0" stylesheets="@style.css" text="Categories" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image> 
+                         <Image url="@../images/catlist.jpg" />
+                        
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            
+            
+               <Button fx:id="btn_mesRegimes" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onMouseClicked="#showMesRegimes" prefHeight="49.0" prefWidth="257.0" stylesheets="@style.css" text="Mes Régimes" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                       <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+
+               <Button fx:id="btn_Statistique" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onMouseClicked="#showStatistique" prefHeight="49.0" prefWidth="257.0" stylesheets="@style.css" text="Statistique" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                       <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            
+              <Button fx:id="btn_ListSuivi" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onMouseClicked="#showListeSuivis" prefHeight="49.0" prefWidth="257.0" stylesheets="@style.css" text="Liste des suivis" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                      <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            
+            
+           </children>
+           
+       </VBox>
+   </children>
+</AnchorPane>

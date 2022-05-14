@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="673.0" prefWidth="1136.0" stylesheets="@newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProgrammeByCatController">
+   <children>
+      <AnchorPane layoutX="98.0" prefHeight="319.0" prefWidth="303.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="593.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" width="229.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f4f2" height="82.0" layoutX="227.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="709.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="82.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="229.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="82.0" layoutX="936.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+            <GridPane layoutY="84.0" prefHeight="593.0" prefWidth="229.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="btn_boutique" mnemonicParsing="false" onAction="#boutique" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion Regimes" />
+                  <Button fx:id="btn_commandes" mnemonicParsing="false" onAction="#commandes" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion des commandes" GridPane.rowIndex="1" />
+                  <Button fx:id="btn_maison" mnemonicParsing="false" onAction="#maison" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion " GridPane.rowIndex="2" />
+                  <Button fx:id="btn_repas" mnemonicParsing="false" onAction="#repas" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion Coachs" GridPane.rowIndex="3" />
+                  <Button fx:id="btn_resrepas" mnemonicParsing="false" onAction="#resrepas" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion reservation repas" GridPane.rowIndex="4" />
+                  <Button fx:id="btn_reclamation" mnemonicParsing="false" onAction="#reclamation" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion des reclamations" GridPane.rowIndex="5" />
+                  <Button fx:id="btn_user1" mnemonicParsing="false" onAction="#user" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion Utilisateur" GridPane.rowIndex="6" />
+                  <Button fx:id="btn_user11" mnemonicParsing="false" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: #ffb638;" text="Gestion des Programmes" GridPane.rowIndex="7" />
+                  <Button fx:id="btn_reserveract" mnemonicParsing="false" onAction="#reservation" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion reservation activités" GridPane.rowIndex="8" />
+                  <Button fx:id="btn_resmais" mnemonicParsing="false" onAction="#resmaison" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion reservation maison dhotes" GridPane.rowIndex="9" />
+                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion reservation evenements" GridPane.rowIndex="11" />
+                  <Button fx:id="btn_evenements" mnemonicParsing="false" onAction="#evenement" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion des evenements" GridPane.rowIndex="10" />
+               </children>
+            </GridPane>
+            <Label fx:id="titreTF" layoutX="942.0" layoutY="290.0" text="Titre">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="995.0" layoutY="28.0" prefHeight="21.0" prefWidth="100.0" text="UTILISATEUR">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="400.0" layoutY="-2.0" prefHeight="0.0" prefWidth="414.0" text="Bienvenue cher client" textAlignment="CENTER" textFill="#a8842a">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+            <TableView fx:id="affichageActivites" layoutX="256.0" layoutY="162.0" prefHeight="337.0" prefWidth="533.0" style="-fx-background-color: e8e8e8;">
+               <columns>
+                  <TableColumn fx:id="nomactcol" prefWidth="113.0" text="Titre" />
+                  <TableColumn fx:id="descactcol" prefWidth="227.0" text="Description" />
+                  <TableColumn fx:id="rateactol" prefWidth="69.0" text="Rate (%)" />
+                  <TableColumn fx:id="img" maxWidth="292.0" minWidth="0.0" prefWidth="125.0" text="Image" />
+                  <TableColumn fx:id="categorieactcol" minWidth="0.0" prefWidth="24.0" text="categorie" />
+               </columns>
+            </TableView>
+            <Label layoutX="267.0" layoutY="126.0" text="Recherche" textFill="#ffb638">
+               <font>
+                  <Font name="Candara Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="rechercheTF" layoutX="333.0" layoutY="122.0" onKeyReleased="#on_on" prefHeight="25.0" prefWidth="447.0" />
+            <Button fx:id="imprimerTF" layoutX="607.0" layoutY="634.0" mnemonicParsing="false" onAction="#OnClickedPrint" prefHeight="29.0" prefWidth="274.0" text="imprimer">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="V_RESIZE" />
+               </cursor>
+            </Button>
+            <Button fx:id="statistiqueTF" layoutX="886.0" layoutY="633.0" mnemonicParsing="false" onAction="#OnClickedStatistique2" prefHeight="30.0" prefWidth="274.0" text="Statistiques">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="V_RESIZE" />
+               </cursor>
+            </Button>
+            <Button fx:id="frontTF" layoutX="994.0" layoutY="51.0" mnemonicParsing="false" onAction="#front" text="Administrateur" />
+            <ImageView fx:id="imagefield" fitHeight="100.0" fitWidth="100.0" layoutX="922.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="LISTECATEGORIES" layoutX="430.0" layoutY="51.0" mnemonicParsing="false" onAction="#front" prefHeight="25.0" prefWidth="340.0" text="AFFICHER LA LISTE DES CATEGORIES" />
+            <Button fx:id="likerTF" layoutX="981.0" layoutY="352.0" mnemonicParsing="false" onAction="#OnClickedLike" prefHeight="50.0" prefWidth="172.0" style="-fx-background-color: #85fc49;" text="j'aime ce programme">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="V_RESIZE" />
+               </cursor>
+            </Button>
+            <Button fx:id="dislikerTF" layoutX="799.0" layoutY="352.0" mnemonicParsing="false" onAction="#OnClickedDislike" prefHeight="50.0" prefWidth="172.0" style="-fx-background-color: #FF0000;" text="j'aime pas ce programme">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="V_RESIZE" />
+               </cursor>
+            </Button>
+            <Label layoutX="58.0" layoutY="24.0" text="Adomifit">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Button fx:id="qrcodeTF" layoutX="834.0" layoutY="419.0" mnemonicParsing="false" onAction="#QRCODE" prefHeight="30.0" prefWidth="274.0" text="OBTENIR QRCODE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="V_RESIZE" />
+               </cursor>
+            </Button>
+             <Button fx:id="qrcodeTF" layoutX="320.0" layoutY="634.0" mnemonicParsing="false" onAction="#ScannerQRCODE" prefHeight="30.0" prefWidth="274.0" text="Ouvrir Scanner QR">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="V_RESIZE" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

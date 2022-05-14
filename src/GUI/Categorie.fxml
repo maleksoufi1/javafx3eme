@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="673.0" prefWidth="1136.0" stylesheets="@newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CategorieController">
+   <children>
+      <AnchorPane prefHeight="663.0" prefWidth="1244.0">
+         <children>
+            <Label layoutX="34.0" layoutY="18.0" text="Adomifit">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="416.0" layoutY="-5.0" prefHeight="59.0" prefWidth="625.0" text="Gestion CategorieProgramme" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+            <TableView fx:id="affichageActivites" layoutX="624.0" layoutY="145.0" prefHeight="430.0" prefWidth="585.0" style="-fx-background-color: e8e8e8;">
+               <columns>
+                  <TableColumn fx:id="nomactcol" prefWidth="110.0" text="Libelle" />
+                  <TableColumn fx:id="descactcol" prefWidth="390.0" text="Description" />
+                  <TableColumn fx:id="img" maxWidth="376.0" minWidth="5.0" prefWidth="94.0" text="Image" />
+               </columns>
+            </TableView>
+            <Label layoutX="622.0" layoutY="112.0" text="Recherche" textFill="#ffb638">
+               <font>
+                  <Font name="Candara Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="rechercheTF" layoutX="685.0" layoutY="110.0" onKeyReleased="#on_on" prefHeight="25.0" prefWidth="505.0" />
+            <GridPane layoutX="263.0" layoutY="117.0" prefHeight="225.0" prefWidth="65.0">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="145.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="203.0" minHeight="10.0" prefHeight="93.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="31.0" prefWidth="63.0" text="Libelle" GridPane.columnIndex="1" />
+                  <Label prefHeight="27.0" prefWidth="90.0" text="Description" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Image" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="352.0" layoutY="120.0" prefHeight="208.0" prefWidth="200.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="137.0" minHeight="0.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="187.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="243.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="libelleTF" />
+                  <Button fx:id="uploadTF" mnemonicParsing="false" onAction="#uploadimg" prefHeight="25.0" prefWidth="217.0" text="upload" GridPane.rowIndex="3" />
+                  <TextField fx:id="descriptionTF" prefHeight="0.0" prefWidth="162.0" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Button fx:id="ajouterTF" layoutX="327.0" layoutY="462.0" mnemonicParsing="false" onAction="#AjouterActivite" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: fcb049;" text="Ajouter Programme" textFill="#f7f8f3">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifierTF" layoutX="327.0" layoutY="497.0" mnemonicParsing="false" onAction="#ModifierActivite" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: #ff6600;" text="modifier" textFill="#fcfaf9">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="SupprimerTF" layoutX="327.0" layoutY="532.0" mnemonicParsing="false" onAction="#SupprimerActivite" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: #FF0000; -fx-background-repeat: ;" text="supprimer" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="imagefield" fitHeight="50.0" fitWidth="50.0" layoutX="416.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="49.0" fitWidth="60.0" layoutX="1137.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/jimmy-fallon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="1195.0" layoutY="22.0" prefHeight="17.0" prefWidth="40.0" text="Coach">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="-2.0" prefHeight="687.0" prefWidth="255.0" style="-fx-background-color: #000000;">
+         <children>
+            <Pane>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="155.0" fitWidth="179.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../images/logob.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="65.0" prefWidth="227.0" />
+            <Button fx:id="LISTEPROGRAMMES" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#LISTEPROGRAMMES" onMouseClicked="#showListCtegorieRegime" prefHeight="49.0" prefWidth="255.0" stylesheets="@style.css" text="Programmes" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            <Button fx:id="frontTF" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#front" onMouseClicked="#showMesRegimes" prefHeight="49.0" prefWidth="257.0" stylesheets="@style.css" text="Front" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_Statistique" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#OnClickedStatistique" onMouseClicked="#showStatistique" prefHeight="49.0" prefWidth="257.0" stylesheets="@style.css" text="Statistique" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_ListSuivi" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#OnClickedPrint" onMouseClicked="#showListeSuivis" prefHeight="49.0" prefWidth="257.0" stylesheets="@style.css" text="Imprimer la liste" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

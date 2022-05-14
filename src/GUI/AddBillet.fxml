@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="441.0" spacing="30.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AddBilletController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="74.0" prefWidth="441.0" spacing="30.0">
+         <children>
+            <Text fx:id="titreForm" strokeType="OUTSIDE" strokeWidth="0.0" text="Détail Billet">
+               <font>
+                  <Font name="System Italic" size="36.0" />
+               </font>
+            </Text>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </HBox>
+      <Pane prefHeight="8.0" prefWidth="441.0" style="-fx-background-color: black;" />
+      <HBox prefHeight="47.0" prefWidth="441.0" spacing="30.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="441.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numero" wrappingWidth="142.6708984375">
+                     <font>
+                        <Font name="Century Gothic" size="20.0" />
+                     </font>
+                  </Text>
+                  <JFXTextField fx:id="NumeroF" prefHeight="31.0" prefWidth="184.0" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="441.0" spacing="30.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Détails" wrappingWidth="143.6708984375">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="DetailF" prefHeight="31.0" prefWidth="179.0" />
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="441.0" spacing="30.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Horraire" wrappingWidth="139.6708984375">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </Text>
+            <JFXDatePicker fx:id="HorraireF" defaultColor="#071715" prefHeight="31.0" prefWidth="191.0" />
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="441.0" spacing="30.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Evenement" wrappingWidth="160.6708984375">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="CombolistEvenement" prefHeight="31.0" prefWidth="218.0" />
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="90.0" prefWidth="441.0" spacing="30.0">
+         <children>
+            <JFXButton fx:id="btnValider" onAction="#valider" onMouseClicked="#valider" prefHeight="67.0" prefWidth="157.0" style="-fx-background-color: black;" text="Valider" textFill="#dd9230">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnAnnuler" onMouseClicked="#annuler" prefHeight="69.0" prefWidth="155.0" style="-fx-background-color: #dd9230;" text="Annuler">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

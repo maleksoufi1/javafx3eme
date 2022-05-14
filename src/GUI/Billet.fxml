@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="1002.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.BilletController">
+   <children>
+      <Text layoutX="354.0" layoutY="63.0" lineSpacing="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Billets" wrappingWidth="450.6708984375">
+         <font>
+            <Font name="System Italic" size="36.0" />
+         </font>
+      </Text>
+      <Pane layoutX="10.0" layoutY="103.0" prefHeight="5.0" prefWidth="1003.0" style="-fx-background-color: black;" />
+      <FontAwesomeIconView glyphName="CLOSE" layoutX="970.0" layoutY="54.0" onMouseClicked="#close" size="30" />
+      <HBox alignment="CENTER" layoutX="194.0" layoutY="164.0" prefHeight="99.0" prefWidth="221.0" spacing="20.0">
+         <children>
+            <FontAwesomeIconView fx:id="add" fill="#da9d18" glyphName="PLUS" onMouseClicked="#ajouterBil" size="60" />
+            <FontAwesomeIconView fx:id="refresh" glyphName="REFRESH" layoutX="10.0" layoutY="61.0" onMouseClicked="#refresh" size="60" />
+            <FontAwesomeIconView fx:id="print" fill="#da9d18" glyphName="PRINT" layoutX="58.0" layoutY="61.0" lineSpacing="50.0" onMouseClicked="#print" size="60" />
+         </children>
+      </HBox>
+      <TableView fx:id="BilletT" layoutX="153.0" layoutY="263.0" prefHeight="400.0" prefWidth="841.0">
+         <columns>
+            <TableColumn fx:id="numeroCol" prefWidth="100.0" text="Numero" />
+            <TableColumn fx:id="DetailCol" prefWidth="250.0" text="Detail" />
+            <TableColumn fx:id="HorraireCol" prefWidth="149.0" text="Horraire" />
+            <TableColumn fx:id="EvenementCol" prefWidth="100.0" text="Evenement" />
+            <TableColumn fx:id="QuantiteCol" prefWidth="149.0" text="Quantite" />
+            <TableColumn fx:id="editCol" prefWidth="100.0" text="..." />
+         </columns>
+      </TableView>
+      <VBox layoutX="-2.0" layoutY="-6.0" prefHeight="212.0" prefWidth="148.0" style="-fx-background-color: black;" />
+      <ImageView fx:id="img" fitHeight="144.0" fitWidth="125.0" layoutX="14.0">
+         <image>
+            <Image url="@../../../../../log.png" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER" layoutX="-3.0" layoutY="191.0" prefHeight="475.0" prefWidth="148.0" style="-fx-background-color: black;">
+         <children>
+            <HBox layoutX="10.0" layoutY="88.0" prefHeight="78.0" prefWidth="148.0">
+               <children>
+                  <FontAwesomeIconView fill="#da9d18" size="30" />
+                  <Button fx:id="gestionCat" mnemonicParsing="false" onMouseClicked="#gestionCat1" prefHeight="51.0" prefWidth="134.0" style="-fx-background-color: black;" text="Catégorie" textFill="#da9d18">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="166.0" prefHeight="78.0" prefWidth="148.0">
+               <children>
+                  <FontAwesomeIconView fill="#da9d18" size="30" />
+                  <Button fx:id="gestionEv" mnemonicParsing="false" onMouseClicked="#gestionEv1" style="-fx-background-color: black;" text="Evenement" textFill="#da9d18">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="78.0" prefWidth="148.0">
+               <children>
+                  <FontAwesomeIconView fill="#da9d18" size="30" />
+                  <Button fx:id="Billet" mnemonicParsing="false" onMouseClicked="#gestionBil" style="-fx-background-color: black;" text="Billet" textFill="#da9d18">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Text layoutX="618.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recherche">
+         <font>
+            <Font name="System Italic" size="19.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="recherche" layoutX="715.0" layoutY="194.0" prefHeight="31.0" prefWidth="267.0" />
+      <Text fx:id="msg" layoutX="687.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="303.6708984375" />
+   </children>
+</AnchorPane>

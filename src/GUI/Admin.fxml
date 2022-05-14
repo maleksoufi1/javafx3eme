@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminController">
+   <children>
+      <Pane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: fffff;">
+         <children>
+            <Button layoutX="1090.0" layoutY="43.0" mnemonicParsing="false" onAction="#logout" prefWidth="146.0" text="Déconnexion">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_delete" layoutX="899.0" layoutY="628.0" mnemonicParsing="false" onAction="#deleteClient" prefHeight="39.0" prefWidth="138.0" style="-fx-background-color: white;" text="Supprimer" textFill="#5798b2" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Button>
+            <Label layoutX="429.0" layoutY="73.0" text="Liste des clients :">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+            <Button layoutX="915.0" layoutY="43.0" mnemonicParsing="false" onAction="#Profil" prefWidth="146.0" text="Profil">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_delete1" layoutX="909.0" layoutY="638.0" mnemonicParsing="false" onAction="#deleteClient" prefHeight="39.0" prefWidth="138.0" style="-fx-background-color: white;" text="Supprimer" textFill="#5798b2" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="UserAjouter" layoutX="814.0" layoutY="637.0" mnemonicParsing="false" onAction="#AjouterUser" prefHeight="39.0" prefWidth="218.0" style="-fx-background-color: #44afda;" text="Ajouter Utilisateur" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="tv_clients" layoutX="318.0" layoutY="182.0" onMouseClicked="#clientListClicked" prefHeight="394.0" prefWidth="769.0">
+         <columns>
+            <TableColumn fx:id="col_nom" prefWidth="100.0" text="Nom " />
+            <TableColumn fx:id="col_prenom" prefWidth="100.0" text="Prénom" />
+            <TableColumn fx:id="col_tel" prefWidth="130.0" text="Téléphone" />
+            <TableColumn fx:id="col_email" prefWidth="180.0" text="Adresse Email" />
+            <TableColumn fx:id="col_action" prefWidth="250.0" text="action" />
+         </columns>
+      </TableView>
+      <Button fx:id="excel" layoutX="1057.0" layoutY="638.0" mnemonicParsing="false" onAction="#excel" prefHeight="39.0" prefWidth="155.0" style="-fx-background-color: #44afda;" text="Voir sur Excel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <VBox layoutX="-2.0" prefHeight="728.0" prefWidth="304.0" style="-fx-background-color: #000000;">
+         <children>
+            <Pane prefHeight="172.0" prefWidth="293.0">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="155.0" fitWidth="179.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../images/logob.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="65.0" prefWidth="227.0" />
+            <Button fx:id="btn_listuser" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#showListeUtilisateurs" onMouseClicked="#showListCtegorieRegime" prefHeight="49.0" prefWidth="255.0" stylesheets="@style.css" text="Listes Utilisateurs" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_evenement" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#showListEvenement" onMouseClicked="#showMesRegimes" prefHeight="49.0" prefWidth="257.0" stylesheets="@style.css" text="Listes evenements" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_produit" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#showListeProduits" onMouseClicked="#showStatistique" prefHeight="49.0" prefWidth="257.0" stylesheets="@style.css" text="Listes des produits" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_reclamation" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#showListeReclamation" onMouseClicked="#showListeSuivis" prefHeight="49.0" prefWidth="257.0" stylesheets="@style.css" text="Listes des reclamation" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="673.0" prefWidth="1136.0" stylesheets="@newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProgrammeController">
+   <children>
+      <AnchorPane layoutX="142.0" prefHeight="637.0" prefWidth="1160.0">
+         <children>
+            <Label layoutX="400.0" layoutY="-2.0" prefHeight="0.0" prefWidth="414.0" text="Gestion Programme" textAlignment="CENTER" textFill="#1b1301">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+            <TableView fx:id="affichageActivites" layoutX="580.0" layoutY="146.0" prefHeight="435.0" prefWidth="551.0" style="-fx-background-color: e8e8e8;">
+               <columns>
+                  <TableColumn fx:id="nomactcol" prefWidth="73.0" text="Titre" />
+                  <TableColumn fx:id="descactcol" prefWidth="122.0" text="Description" />
+                  <TableColumn fx:id="categorieactcol" prefWidth="79.0" text="Categorie" />
+                  <TableColumn fx:id="likeactol" prefWidth="65.0" text="Like" />
+                  <TableColumn fx:id="dislikeactol" prefWidth="65.0" text="Dislike" />
+                  <TableColumn fx:id="rateactol" prefWidth="65.0" text="Rate (%)" />
+                  <TableColumn fx:id="img" maxWidth="292.0" prefWidth="82.0" text="Image" />
+               </columns>
+            </TableView>
+            <Label layoutX="578.0" layoutY="114.0" text="Recherche" textFill="#ffb638">
+               <font>
+                  <Font name="Candara Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="rechercheTF" layoutX="640.0" layoutY="110.0" onKeyReleased="#on_on" prefHeight="25.0" prefWidth="487.0" />
+            <GridPane layoutX="124.0" layoutY="134.0" prefHeight="208.0" prefWidth="67.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="145.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="220.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="203.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="31.0" prefWidth="63.0" text="Titre" />
+                  <Label prefHeight="58.0" prefWidth="68.0" text="Description" GridPane.rowIndex="1" />
+                  <Label prefHeight="67.0" prefWidth="63.0" text="Categ_id" GridPane.rowIndex="2" />
+                  <Label text="Image" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="248.0" layoutY="129.0" prefHeight="208.0" prefWidth="200.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="137.0" minHeight="0.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="187.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="243.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="titreTF" />
+                  <Button fx:id="uploadTF" mnemonicParsing="false" onAction="#uploadimg" prefHeight="25.0" prefWidth="217.0" text="upload" GridPane.rowIndex="3" />
+                  <TextField fx:id="descriptionTF" prefHeight="0.0" prefWidth="162.0" GridPane.rowIndex="1" />
+                  <ChoiceBox fx:id="boxCat" onMouseClicked="#initialize" prefWidth="150.0" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <Button fx:id="ajouterTF" layoutX="223.0" layoutY="465.0" mnemonicParsing="false" onAction="#AjouterActivite" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: fcb049;" text="Ajouter Programme" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifierTF" layoutX="223.0" layoutY="499.0" mnemonicParsing="false" onAction="#ModifierActivite" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: #ff6600;" text="modifier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="SupprimerTF" layoutX="223.0" layoutY="532.0" mnemonicParsing="false" onAction="#SupprimerActivite" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: #FF0000; -fx-background-repeat: ;" text="supprimer" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="imagefield" fitHeight="50.0" fitWidth="50.0" layoutX="317.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="1116.0" layoutY="19.0" prefHeight="17.0" prefWidth="40.0" text="Coach">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="49.0" fitWidth="60.0" layoutX="1055.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/jimmy-fallon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <VBox prefHeight="687.0" prefWidth="255.0" style="-fx-background-color: #000000;">
+         <children>
+            <Pane>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="155.0" fitWidth="179.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../images/logob.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="65.0" prefWidth="227.0" />
+            <Button fx:id="LISTECATEGORIES" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#LISTECATEGORIES" onMouseClicked="#showListCtegorieRegime" prefHeight="49.0" prefWidth="255.0" stylesheets="@style.css" text="Categories" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            <Button fx:id="frontTF1" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#front" onMouseClicked="#showMesRegimes" prefHeight="49.0" prefWidth="257.0" stylesheets="@style.css" text="Front" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_Statistique" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#OnClickedStatistique" onMouseClicked="#showStatistique" prefHeight="49.0" prefWidth="257.0" stylesheets="@style.css" text="Statistique" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_ListSuivi" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#OnClickedPrint" onMouseClicked="#showListeSuivis" prefHeight="49.0" prefWidth="257.0" stylesheets="@style.css" text="Imprimer la liste" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/catlist.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

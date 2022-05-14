@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="673.0" prefWidth="1136.0" stylesheets="@newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FrontController">
+   <children>
+      <AnchorPane layoutX="54.0" layoutY="-16.0" prefHeight="699.0" prefWidth="1002.0">
+         <children>
+            <TableView fx:id="affichageActivites" layoutX="496.0" layoutY="154.0" prefHeight="339.0" prefWidth="568.0" style="-fx-background-color: e8e8e8;">
+               <columns>
+                  <TableColumn fx:id="nomactcol" prefWidth="236.0" text="Libelle" />
+                  <TableColumn fx:id="descactcol" prefWidth="206.0" text="Description" />
+                  <TableColumn fx:id="img" maxWidth="376.0" minWidth="2.0" prefWidth="60.0" text="Image" />
+                  <TableColumn fx:id="actionactol" maxWidth="429.0" prefWidth="64.0" text="Action" />
+               </columns>
+            </TableView>
+            <Label layoutX="503.0" layoutY="121.0" text="Recherche" textFill="#ffb638">
+               <font>
+                  <Font name="Candara Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="rechercheTF" layoutX="583.0" layoutY="117.0" onKeyReleased="#on_on" prefHeight="25.0" prefWidth="481.0" />
+            <ImageView fx:id="imagefield" fitHeight="59.0" fitWidth="59.0" layoutX="95.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fx:id="titreTF" layoutX="92.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TITRE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+            <Button fx:id="frontTF" layoutX="625.0" layoutY="648.0" mnemonicParsing="false" onAction="#back" text="Administrateur" />
+            <Pane layoutX="279.0" layoutY="24.0" prefHeight="65.0" prefWidth="393.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="-1.0" prefHeight="66.0" prefWidth="135.0">
+                     <children>
+                        <Label fx:id="RegimesButton" onMouseClicked="#redirectRegime" text="Regimes">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="134.0" prefHeight="66.0" prefWidth="148.0">
+                     <children>
+                        <Label fx:id="EvenementsButton" onMouseClicked="#redirectEvenemnt" prefHeight="30.0" prefWidth="122.0" text="Evenements">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="239.0" prefHeight="66.0" prefWidth="165.0">
+                     <children>
+                        <Label fx:id="ProduitsButton" onMouseClicked="#redirectProduit" text="Produits">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="374.0" prefHeight="66.0" prefWidth="180.0">
+                     <children>
+                        <Label onMouseClicked="#redirectProgrammes" text="Programmes">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="520.0" prefHeight="66.0" prefWidth="154.0">
+                     <children>
+                        <Label fx:id="ForumButton" onMouseClicked="#redirectForum" text="Forum">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Label layoutX="936.0" layoutY="26.0" prefHeight="62.0" prefWidth="100.0" text="Client" textFill="#878787">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="38.0" text="Adomifit">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="50.0" fitWidth="55.0" layoutX="1072.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/jimmy-fallon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

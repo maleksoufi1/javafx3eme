@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="802.0" prefWidth="1386.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CategorieProduitController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="734.0" prefWidth="1000.0">
+         <children>
+            <AnchorPane layoutX="343.0" layoutY="79.0" prefHeight="560.0" prefWidth="966.0">
+               <children>
+                  <Button fx:id="bsave" layoutX="419.0" layoutY="494.0" mnemonicParsing="false" onAction="#saveEvent" prefHeight="33.0" prefWidth="71.0" style="-fx-background-color: #a2c11c;" styleClass="search-button" stylesheets="@../../../../Desktop/PIDEV/JAVA/CampersDen/src/edu/JavaPIDEV/GUI/addommande.css" text="Save">
+                     <font>
+                        <Font name="Times New Roman Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bupdate" layoutX="579.0" layoutY="494.0" mnemonicParsing="false" onAction="#Update" prefHeight="33.0" prefWidth="71.0" style="-fx-background-color: #f7aa00;" styleClass="search-button" stylesheets="@../../../../Desktop/PIDEV/JAVA/CampersDen/src/edu/JavaPIDEV/GUI/addommande.css" text="Edit">
+                     <font>
+                        <Font name="Times New Roman Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bdelete" layoutX="675.0" layoutY="494.0" mnemonicParsing="false" onAction="#deleteEvent" prefHeight="33.0" prefWidth="71.0" style="-fx-background-color: #f95959;" styleClass="search-button" stylesheets="@../../../../Desktop/PIDEV/JAVA/CampersDen/src/edu/JavaPIDEV/GUI/addommande.css" text="Delete">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="table" layoutX="232.0" layoutY="123.0" onMouseClicked="#tablehandleButtonAction" prefHeight="344.0" prefWidth="592.0" AnchorPane.leftAnchor="232.0" AnchorPane.rightAnchor="123.0" AnchorPane.topAnchor="123.0">
+                     <columns>
+                        <TableColumn fx:id="col_lib" prefWidth="126.0" text="Libelle" />
+                        <TableColumn fx:id="col_desc" minWidth="0.0" prefWidth="432.0" text="Description" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="libelle" layoutX="55.0" layoutY="136.0" prefHeight="33.0" prefWidth="149.0" styleClass="search-box" stylesheets="@../../../../Desktop/PIDEV/JAVA/CampersDen/src/edu/JavaPIDEV/GUI/addommande.css" />
+                  <TextField fx:id="description" layoutX="55.0" layoutY="203.0" prefHeight="33.0" prefWidth="149.0" styleClass="search-box" stylesheets="@../../../../Desktop/PIDEV/JAVA/CampersDen/src/edu/JavaPIDEV/GUI/addommande.css" />
+                  <TextField fx:id="tfrecherche" layoutX="232.0" layoutY="77.0" onAction="#Rechercher" prefHeight="30.0" prefWidth="149.0" promptText="Search" style="-fx-background-radius: 50;" styleClass="search-box" stylesheets="@../../../../Desktop/PIDEV/JAVA/CampersDen/src/edu/JavaPIDEV/GUI/addommande.css" />
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="327.0" text="Ajouter Categorie Produit" textFill="#a4a29b">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="idcateg" layoutX="508.0" layoutY="494.0" prefHeight="33.0" prefWidth="71.0" promptText="ID to edit" styleClass="search-box" stylesheets="@../../../../Desktop/PIDEV/JAVA/CampersDen/src/edu/JavaPIDEV/GUI/addommande.css">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <Text layoutX="354.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Libelle" />
+            <Text layoutX="343.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+            <ImageView fx:id="fxlogo" fitHeight="78.0" fitWidth="111.0" layoutX="1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/PIDEV/JAVA/PI%20DEV%20Project/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="10.0" layoutY="94.0" prefHeight="593.0" prefWidth="229.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="btn_programme" mnemonicParsing="false" onAction="#Programme" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Programme" />
+            <Button fx:id="btn_commandes" mnemonicParsing="false" onAction="#commandes" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Ca" GridPane.rowIndex="1" />
+            <Button fx:id="btn_maison" mnemonicParsing="false" onAction="#maison" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion " GridPane.rowIndex="2" />
+            <Button fx:id="btn_repas" mnemonicParsing="false" onAction="#repas" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion Coachs" GridPane.rowIndex="3" />
+            <Button fx:id="btn_resrepas" mnemonicParsing="false" onAction="#resrepas" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion reservation repas" GridPane.rowIndex="4" />
+            <Button fx:id="btn_reclamation" mnemonicParsing="false" onAction="#reclamation" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion des reclamations" GridPane.rowIndex="5" />
+            <Button fx:id="btn_user1" mnemonicParsing="false" onAction="#user" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion Utilisateur" GridPane.rowIndex="6" />
+            <Button fx:id="btn_categorieprogramme" mnemonicParsing="false" onAction="#CatProg" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion des Programmes" GridPane.rowIndex="9" />
+            <Button fx:id="btn_reserveract" mnemonicParsing="false" onAction="#reservation" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion reservation activités" GridPane.rowIndex="10" />
+            <Button fx:id="btn_resmais" mnemonicParsing="false" onAction="#resmaison" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion reservation maison dhotes" GridPane.rowIndex="11" />
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion reservation evenements" GridPane.rowIndex="13" />
+            <Button fx:id="btn_evenements" mnemonicParsing="false" onAction="#evenement" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion des evenements" GridPane.rowIndex="12" />
+            <Button alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#changeScreenProduit" prefHeight="42.0" prefWidth="258.0" style="-fx-background-color: ffd137;" stylesheets="@../../../../Desktop/PIDEV/JAVA/CampersDen/src/CSS/style.css" text="Produit" textOverrun="CLIP" GridPane.rowIndex="7" />
+            <Button alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#changeScreencateg" prefHeight="42.0" prefWidth="258.0" style="-fx-background-color: #ffb638;" stylesheets="@../../../../Desktop/PIDEV/JAVA/CampersDen/src/CSS/style.css" text="Categorie Produit" textFill="#1e1d1d" textOverrun="CLIP" GridPane.rowIndex="8">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

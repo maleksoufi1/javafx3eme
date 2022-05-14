@@ -1,0 +1,35 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7 mai 2022, 12:36:16
+    Author     : Asus
+*/
+Label
+{
+    -fx-text-fill:#fffefe;
+}
+.anchor {
+    -fx-background-image:url('hero-1.jpg');
+     -fx-background-size: 100% 100%;
+}
+.anchor2 {
+    -fx-background-image:url('breadcrumb-bg.jpg');
+     -fx-background-size: 100% 100%;
+}
+
+.item
+{
+    -fx-background-color:rgba(128,128,128, 0.5);
+}
+
+.req
+{
+    -fx-text-fill:red;
+}
+.user
+{
+    -fx-text-fill:orange;
+}

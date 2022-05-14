@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.InscriptionController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="7.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="737.0" layoutY="83.0" text="Créer un nouveau compte" textFill="#ff6000">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+            <VBox layoutX="744.0" layoutY="192.0" prefHeight="428.0" prefWidth="218.0" spacing="16.0">
+               <children>
+                  <Label text="Nom :">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label text="Prénom :">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label text="Télephone :">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label text="Taille :">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="34.0" prefWidth="230.0" text="Poid :">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="34.0" prefWidth="219.0" text="Sexe :">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="35.0" prefWidth="199.0" text="Adresse Email :">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label text="Mot de passe :">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Pane layoutX="-18.0" layoutY="-6.0" prefHeight="726.0" prefWidth="642.0" style="-fx-background-color: #2B2930;">
+               <children>
+                  <Label layoutX="159.0" layoutY="339.0" text="Vous avez déja un compte ?" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="250.0" layoutY="428.0" mnemonicParsing="false" onAction="#backToSignIn" prefHeight="39.0" prefWidth="142.0" style="-fx-background-color: white;" text="Se connecter" textFill="#ff6000">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="122.0" fitWidth="135.0" layoutX="254.0" layoutY="181.0">
+                     <image>
+                        <Image url="@../../../../../Desktop/272719820_1012269676028236_4213629770679518559_n.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox layoutX="980.0" layoutY="189.0" prefHeight="428.0" prefWidth="218.0" spacing="16.0">
+               <children>
+                  <TextField fx:id="tf_nom" prefHeight="36.0" prefWidth="218.0" />
+                  <TextField fx:id="tf_prenom" prefHeight="36.0" prefWidth="218.0" />
+                  <TextField fx:id="tf_tel" prefHeight="31.0" prefWidth="218.0" />
+                  <TextField fx:id="tf_taille" prefHeight="31.0" prefWidth="218.0" />
+                  <TextField fx:id="tf_poid" prefHeight="35.0" prefWidth="218.0" />
+                  <TextField fx:id="tf_sexe" prefHeight="36.0" prefWidth="218.0" />
+                  <TextField fx:id="tf_mail" prefHeight="35.0" prefWidth="218.0" />
+                  <PasswordField fx:id="tf_pwd" prefHeight="34.0" prefWidth="218.0" />
+               </children>
+            </VBox>
+            <Button fx:id="btn_confirm" layoutX="980.0" layoutY="599.0" mnemonicParsing="false" onAction="#onSave" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #2B2930;" text="Confirmer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

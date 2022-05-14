@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="732.0" prefWidth="1302.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FrontProduitController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="293.0" layoutY="108.0" prefHeight="719.0" prefWidth="951.0">
+         <children>
+            <BorderPane layoutX="-22.0" layoutY="5.0" prefHeight="714.0" prefWidth="850.0">
+               <center>
+                  <VBox prefHeight="693.0" prefWidth="657.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="543.0">
+                           <children>
+                              <ComboBox fx:id="sort_cb" prefHeight="25.0" prefWidth="124.0" promptText="Trié par">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <ComboBox fx:id="boxCat" prefHeight="25.0" prefWidth="132.0" promptText="Catégorie">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <Button fx:id="btnReche" mnemonicParsing="false" onAction="#RechercheProduit" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: #92FC07; -fx-background-radius: 30;" text="Filtrer ">
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="30.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <ScrollPane fx:id="scroll" minWidth="447.0" prefHeight="664.0" prefWidth="732.0" style="-fx-background-color: #92FC07;">
+                           <content>
+                              <GridPane fx:id="grid" prefHeight="30.0" prefWidth="0.0">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+            <HBox alignment="CENTER" layoutX="927.0" layoutY="31.0" prefHeight="580.0" prefWidth="68.0" snapToPixel="false" style="-fx-background-color: #eff5ef;" />
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="14.0" layoutY="108.0" prefHeight="593.0" prefWidth="229.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="btn_programme" mnemonicParsing="false" onAction="#Programme" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Programmes" />
+            <Button fx:id="btn_commandes" mnemonicParsing="false" onAction="#commandes" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion des commandes" GridPane.rowIndex="2" />
+            <Button fx:id="btn_maison" mnemonicParsing="false" onAction="#maison" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion " GridPane.rowIndex="3" />
+            <Button fx:id="btn_repas" mnemonicParsing="false" onAction="#repas" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion Coachs" GridPane.rowIndex="4" />
+            <Button fx:id="btn_resrepas" mnemonicParsing="false" onAction="#resrepas" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion reservation repas" GridPane.rowIndex="5" />
+            <Button fx:id="btn_reclamation" mnemonicParsing="false" onAction="#reclamation" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion des reclamations" GridPane.rowIndex="6" />
+            <Button fx:id="btn_user1" mnemonicParsing="false" onAction="#user" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion Utilisateur" GridPane.rowIndex="7" />
+            <Button fx:id="btn_user11" mnemonicParsing="false" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion des Programmes" GridPane.rowIndex="8" />
+            <Button fx:id="btn_reserveract" mnemonicParsing="false" onAction="#reservation" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion" GridPane.rowIndex="9" />
+            <Button fx:id="btn_resmais" mnemonicParsing="false" onAction="#resmaison" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion reservation maison dhotes" GridPane.rowIndex="10" />
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion reservation evenements" GridPane.rowIndex="12" />
+            <Button fx:id="btn_evenements" mnemonicParsing="false" onAction="#evenement" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: ffd137;" text="Gestion des evenements" GridPane.rowIndex="11" />
+            <Button fx:id="btn_repas1" mnemonicParsing="false" onAction="#repas" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: #ffb638;" text="Produits" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
